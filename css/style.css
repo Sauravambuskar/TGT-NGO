@@ -285,6 +285,69 @@ nav ul li a.active::after {
     }
 }
 
+/* Trust Images Section */
+.trust-images-section {
+    background-color: var(--light-color);
+    padding: 80px 0;
+}
+
+.trust-images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 2fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.trust-image-item {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: var(--light-color);
+}
+
+.trust-image-item:hover {
+    transform: translateY(-5px);
+}
+
+.trust-image-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.trust-image-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Responsive Design for Trust Images */
+@media screen and (max-width: 768px) {
+    .trust-images-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .trust-image-item img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .trust-images-section {
+        padding: 60px 0;
+    }
+    
+    .trust-images-container {
+        gap: 20px;
+    }
+    
+    .trust-image-item img {
+        height: 400px;
+    }
+}
+
 /* About Section */
 .about-section {
     background-color: var(--light-color);
